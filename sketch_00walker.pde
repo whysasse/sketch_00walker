@@ -1,25 +1,27 @@
 //Declara objeto
-Andarilho a;
+Andarilho a, b;
 
 //Declara variáveis
-int x;
-int y;
+int x, y;
 int dia;
 
 void setup() {
-  size(200, 200);
+  size(400, 400);
   background(0);
   smooth();
-  noStroke();
+  // noStroke();
   fill(255);
   //Randomiza posição do objeto
   x = int(random(width));
   y = int(random(height));
   a = new Andarilho(x, y, 3); //Constrói o objeto
+  b = new Andarilho(x*2, y*2, 4); //Constrói o objeto
 }
 
 void draw() {
   a.anda();
   a.aparece();
+  b.anda();
+  b.aparece();
 }
 
