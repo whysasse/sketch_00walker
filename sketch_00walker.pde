@@ -7,15 +7,10 @@ int dia;
 
 void setup() {
   size(400, 400);
-  background(0);
   smooth();
   // noStroke();
   fill(255);
-  //Randomiza posição do objeto
-  x = int(random(width));
-  y = int(random(height));
-  a = new Andarilho(x, y, 3); //Constrói o objeto
-  b = new Andarilho(x*2, y*2, 4); //Constrói o objeto
+  desenha();
 }
 
 void draw() {
@@ -23,5 +18,18 @@ void draw() {
   a.aparece();
   b.anda();
   b.aparece();
+}
+
+void mouseReleased() {
+  desenha();
+}
+
+void desenha() {
+  background(0);
+  //Randomiza posição do objeto
+  x = int(random(width));
+  y = int(random(height));
+  a = new Andarilho(x, y, 3); //Constrói o objeto
+  b = new Andarilho(x*2, y*2, 4); //Constrói o objeto
 }
 
