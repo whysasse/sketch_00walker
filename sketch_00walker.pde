@@ -5,6 +5,8 @@ Andarilho a, b;
 int x, y;
 int dia;
 
+//TODO faz x e y iniciais serem o meio da tela
+
 void setup() {
   size(400, 400);
   smooth();
@@ -32,4 +34,3 @@ void desenha() {
   a = new Andarilho(x, y, 3); //Constrói o objeto
   b = new Andarilho(x*2, y*2, 4); //Constrói o objeto
 }
-

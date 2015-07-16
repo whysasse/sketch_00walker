@@ -12,16 +12,33 @@ class Andarilho {
   }
 
   void anda() {
-    int passo = int(random(4));
+    int passo = int(random(5));
     if (passo == 0) {
       x++;
     } else if (passo == 1) {
       x--;
     } else if (passo == 2) {
       y++;
-    } else {
+    } else if (passo == 3) {
       y--;
+    } else {
+      if (mouseX > x){
+        if (mouseY > y){
+          x++;
+          y++;
+        } else {
+          x++;
+          y--;
+        }
+      } else {
+        if (mouseY > y){
+          x--;
+          y++;
+        } else {
+          x--;
+          y--;
+        }
+      }
     }
   }
 }
-
