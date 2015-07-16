@@ -28,9 +28,10 @@ void mouseReleased() {
 
 void desenha() {
   background(0);
-  //Randomiza posição do objeto
-  x = int(random(width));
-  y = int(random(height));
+  x = width/2;
+  y = height/2;
+  //Andarilho a aparece no meio da tela
   a = new Andarilho(x, y, 3); //Constrói o objeto
+  //Andarilho b aparece no canto da tela
   b = new Andarilho(x*2, y*2, 4); //Constrói o objeto
 }
